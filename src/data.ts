@@ -214,7 +214,15 @@ export const viewSamples = [
 export const heroPhoto = asset('honey.png')
 
 export const videoAd = asset('video/video-ad.mp4')
-export const videoReel = asset('video/reel.mp4')
+
+// Vertical (9:16) short-form reels — FB & TikTok.
+export const reels = [
+  asset('video/reel-1.mp4'),
+  asset('video/reel-2.mp4'),
+  asset('video/reel-3.mp4'),
+  asset('video/reel-4.mp4'),
+  asset('video/reel-5.mp4'),
+]
 
 export const clients = [
   'Basa Brothers Mobile Bar',

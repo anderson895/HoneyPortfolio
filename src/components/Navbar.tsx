@@ -34,8 +34,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-forest-100 bg-cream-100/90 py-3 backdrop-blur-md'
+        scrolled || open
+          ? 'border-b border-forest-100 bg-cream-100/95 py-3 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent py-5'
       }`}
     >
@@ -88,11 +88,11 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-[max-height] duration-300 lg:hidden ${
-          open ? 'max-h-96' : 'max-h-0'
+        className={`overflow-hidden bg-cream-100 transition-[max-height] duration-300 ease-out lg:hidden ${
+          open ? 'max-h-[80vh] border-t border-forest-100 shadow-xl shadow-forest-900/5' : 'max-h-0'
         }`}
       >
-        <ul className="container-px flex flex-col gap-1 pb-5 pt-4">
+        <ul className="container-px flex flex-col gap-1 py-4">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a

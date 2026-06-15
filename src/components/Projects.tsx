@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { projects, logoSamples, coverSamples, viewSamples, clients, videoAd, videoReel } from '../data'
+import { projects, logoSamples, coverSamples, viewSamples, clients, videoAd, reels } from '../data'
 import SectionHeading from './SectionHeading'
 import Lightbox from './Lightbox'
 
@@ -130,8 +130,10 @@ export default function Projects() {
         {/* Video production */}
         {tab === 'all' && (
           <div className="mt-16">
-            <h3 className="reveal mb-5 font-display text-2xl text-forest-700">Video Production &amp; Reels</h3>
-            <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+            <h3 className="reveal mb-5 font-display text-2xl text-forest-700">Video Production &amp; Editing</h3>
+
+            {/* Featured advertisement (landscape) + highlight */}
+            <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
               <div className="reveal overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-lg">
                 <video
                   src={videoAd}
@@ -146,26 +148,36 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="reveal grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-                <div className="overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-lg">
+              <div className="reveal flex flex-col justify-center rounded-2xl border border-forest-100 bg-gradient-to-br from-forest-600 to-forest-800 p-8 text-cream-50">
+                <p className="font-display text-5xl">50K+</p>
+                <p className="mt-3 text-cream-200">
+                  Video views generated across reels &amp; short-form content on Facebook and TikTok —
+                  100% produced and edited in-house.
+                </p>
+              </div>
+            </div>
+
+            {/* Reels gallery (portrait 9:16) */}
+            <div className="reveal mt-10 flex items-center justify-between">
+              <h4 className="font-display text-xl text-forest-700">Reels — FB &amp; TikTok</h4>
+              <span className="text-xs uppercase tracking-wider text-forest-400">Short-form · 9:16</span>
+            </div>
+            <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+              {reels.map((reel, i) => (
+                <div
+                  key={reel}
+                  className="reveal group overflow-hidden rounded-2xl border border-forest-100 bg-forest-900 shadow-sm transition-all hover:shadow-xl hover:shadow-forest-600/10"
+                  style={{ transitionDelay: `${i * 60}ms` }}
+                >
                   <video
-                    src={videoReel}
+                    src={reel}
                     controls
                     playsInline
                     preload="metadata"
-                    className="aspect-video w-full bg-forest-900"
+                    className="aspect-[9/16] w-full bg-forest-900 object-cover"
                   />
-                  <div className="flex items-center justify-between bg-cream-50 px-5 py-3">
-                    <p className="font-medium text-forest-700">Short-form Reel</p>
-                    <span className="text-xs uppercase tracking-wider text-forest-400">FB &amp; TikTok</span>
-                  </div>
                 </div>
-
-                <div className="rounded-2xl border border-forest-100 bg-gradient-to-br from-forest-600 to-forest-800 p-6 text-cream-50">
-                  <p className="font-display text-3xl">50K+</p>
-                  <p className="mt-1 text-sm text-cream-200">Video views generated across reels &amp; short-form content on Facebook and TikTok.</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Views / reach proof */}
