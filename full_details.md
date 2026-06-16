@@ -54,7 +54,7 @@ Stats:
 50K+ Video Views Generated
 100% Content Produced & Edited In-House
 -----
-3+ Years Creative Experience
+4+ Years Creative Experience
 20+ Projects Completed
 5+ Organizations Served
 -----

@@ -14,7 +14,7 @@ export default function About() {
                 <img src={heroPhoto} alt={profile.name} className="aspect-[4/5] w-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-6 -right-4 rounded-2xl border border-forest-100 bg-forest-500 px-6 py-4 text-cream-50 shadow-xl shadow-forest-600/30">
-                <p className="font-display text-3xl">3+</p>
+                <p className="font-display text-3xl">4+</p>
                 <p className="text-xs tracking-wide text-cream-200">Years of Creative Work</p>
               </div>
             </div>

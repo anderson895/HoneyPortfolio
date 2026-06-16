@@ -34,7 +34,7 @@ export const floatingBadges = [
 ]
 
 export const heroStats = [
-  { value: '3+', label: 'Years Creative Experience' },
+  { value: '4+', label: 'Years Creative Experience' },
   { value: '20+', label: 'Projects Completed' },
   { value: '5+', label: 'Organizations Served' },
 ]
